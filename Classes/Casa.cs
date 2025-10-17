@@ -12,7 +12,7 @@ namespace desafio_poo.Classes
             return "Placheholder";
         }
 
-        public override int calcularAluguel(int dias)
+        public override decimal calcularAluguel(int dias)
         {
             throw new NotImplementedException();
         }

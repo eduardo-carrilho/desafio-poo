@@ -30,16 +30,30 @@ namespace desafio_poo.Classes
             return $"Se tiver interesse nesse imóvel, pode entrar em contato com o(a) Sr(a) {this.Proprietario.Nome}, portador do CPF {this.Proprietario.CPF} através do telefone ${this.Proprietario.Telefone}";
         }
 
-        public abstract int calcularAluguel(int dias);
+        public abstract decimal calcularAluguel(int dias);
 
         public void Alugar()
         {
-
+            if(this.Alugado)
+            {
+                Console.WriteLine("Impossível alugar esse imóvel pois ele já está alugado.");
+            }
+            else
+            {
+                this.Alugado = !this.Alugado;
+            }
         }
 
         public void Disponibilizar()
         {
-            
+            if(!this.Alugado)
+            {
+                Console.WriteLine("Impossível disponibilizar esse imóvel pois ele não está alugado.");
+            }
+            else
+            {
+                this.Alugado = !this.Alugado;
+            }
         }
 
         public void alterarEndereco(string novoEndereco)
