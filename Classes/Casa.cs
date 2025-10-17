@@ -9,7 +9,11 @@ namespace desafio_poo.Classes
     {
         public override string ObterStatusAluguel()
         {
-            return "Placheholder";
+
+            if(this.Alugado)
+            {
+                return $"A casa está alugada";
+            }else return $"A casa está disponível";
         }
 
         public override decimal CalcularAluguel(int dias)
