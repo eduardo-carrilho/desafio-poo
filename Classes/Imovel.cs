@@ -10,7 +10,7 @@ namespace desafio_poo.Classes
         protected string Endereco { get; set; }
         protected int Numero { get; set; }
         protected bool Alugado { get; set; }
-        public string Proprietario { get; set; }
+        public Proprietario Proprietario { get; set; }
 
         public bool estaAlugado()
         {
@@ -19,7 +19,7 @@ namespace desafio_poo.Classes
 
         public string contatoProprietario()
         {
-            return $"O nome do proprietário é {this.Proprietario}";
+            return $"Se tiver interesse nesse imóvel, pode entrar em contato com o(a) Sr(a) {this.Proprietario.Nome}, portador do CPF {this.Proprietario.CPF} através do telefone ${this.Proprietario.Telefone}";
         }
 
         public int calcularAluguel(int anos)
