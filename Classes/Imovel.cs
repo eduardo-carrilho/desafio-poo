@@ -25,10 +25,6 @@ namespace desafio_poo.Classes
             }
         }
 
-        public string contatoProprietario()
-        {
-            return $"Se tiver interesse nesse imóvel, pode entrar em contato com o(a) Sr(a) {this.Proprietario.Nome}, portador do CPF {this.Proprietario.CPF} através do telefone ${this.Proprietario.Telefone}";
-        }
 
         public abstract decimal calcularAluguel(int dias);
 

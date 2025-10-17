@@ -11,6 +11,9 @@ namespace desafio_poo.Classes
         public string Telefone { get; set; }
         public string CPF { get; set; }
 
-
+        public string contatoProprietario()
+        {
+            return $"Se tiver interesse nesse imóvel, pode entrar em contato com o(a) Sr(a) {this.Nome}, portador do CPF {this.CPF} através do telefone ${this.Telefone}";
+        }
     }
 }
