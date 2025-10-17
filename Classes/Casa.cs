@@ -7,6 +7,9 @@ namespace desafio_poo.Classes
 {
     public class Casa : Imovel
     {
-        
+        public override bool estaAlugado()
+        {
+            return this.Alugado;
+        }
     }
 }

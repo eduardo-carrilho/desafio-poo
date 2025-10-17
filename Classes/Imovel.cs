@@ -12,10 +12,7 @@ namespace desafio_poo.Classes
         protected bool Alugado { get; set; }
         public Proprietario Proprietario { get; set; }
 
-        public bool estaAlugado()
-        {
-            return this.Alugado;
-        }
+        public abstract bool estaAlugado();
 
         public string contatoProprietario()
         {
