@@ -24,9 +24,33 @@ namespace desafio_poo.Classes
 
         public int calcularAluguel(int anos)
         {
-            return anos;    
+            return anos;
         }
 
+        public void alterarEndereco(string novoEndereco)
+        {
+            this.Endereco = novoEndereco;
+        }
+
+        public string puxarEndereco()
+        {
+            return this.Endereco;
+        }
+
+        public void alterarNumero(int novoNumero)
+        {
+            this.Numero = novoNumero;
+        }
+
+        public int puxarNumero()
+        {
+            return this.Numero;
+        }
+
+        public void alterarStatusAluguel()
+        {
+            this.Alugado = !this.Alugado;
+        }
 
     }
 }
