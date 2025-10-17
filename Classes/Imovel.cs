@@ -7,7 +7,7 @@ namespace desafio_poo.Classes
 {
     public abstract class Imovel
     {
-        protected int ind { get; set; }
+        protected int Id { get; set; }
         protected string Endereco { get; set; }
         protected int Numero { get; set; }
         protected bool Alugado { get; set; }
