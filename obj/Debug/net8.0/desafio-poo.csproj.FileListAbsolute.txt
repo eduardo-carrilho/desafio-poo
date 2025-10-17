@@ -12,3 +12,4 @@ C:\GFT\desafio-poo\obj\Debug\net8.0\refint\desafio-poo.dll
 C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.pdb
 C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.genruntimeconfig.cache
 C:\GFT\desafio-poo\obj\Debug\net8.0\ref\desafio-poo.dll
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.sourcelink.json

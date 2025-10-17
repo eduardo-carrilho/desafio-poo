@@ -15,6 +15,7 @@ namespace desafio_poo.Classes
         public Imobiliaria(string nome)
         {
             this.Nome = nome;
+            this.ListaImoveis = [];
         }
     }
 }

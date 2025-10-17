@@ -7,6 +7,10 @@ namespace desafio_poo.Classes
 {
     public class Casa : Imovel
     {
+        public Casa(int id, string endereco, int numero, Proprietario proprietario) : base(id, endereco, numero, proprietario)
+        {
+        }
+
         public override string ObterStatusAluguel()
         {
 

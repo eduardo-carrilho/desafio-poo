@@ -13,6 +13,14 @@ namespace desafio_poo.Classes
         protected bool Alugado { get; set; }
         protected Proprietario Proprietario { get; set; }
 
+        public Imovel(int id, string endereco, int numero, Proprietario proprietario){
+            this.Id = id;
+            this.Endereco = endereco;
+            this.Numero = numero;
+            this.Proprietario = proprietario;
+            this.Alugado = false;
+        }
+
         public abstract decimal CalcularAluguel(int dias);
 
         public virtual string ObterStatusAluguel()
@@ -36,7 +44,7 @@ namespace desafio_poo.Classes
             }
             else
             {
-                this.Alugado = !this.Alugado;
+                this.Alugado = true;
             }
         }
 
@@ -48,7 +56,7 @@ namespace desafio_poo.Classes
             }
             else
             {
-                this.Alugado = !this.Alugado;
+                this.Alugado = false;
             }
         }
 
@@ -72,5 +80,18 @@ namespace desafio_poo.Classes
             return this.Numero;
         }
 
+        public int puxarId()
+        {
+            return this.Id;
+        }
+
+        public bool estaAlugado()
+        {
+            return this.Alugado;
+        }
+        public Proprietario puxarProprietario()
+        {
+            return this.Proprietario;
+        }
     }
 }

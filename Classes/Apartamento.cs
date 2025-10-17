@@ -8,6 +8,12 @@ namespace desafio_poo.Classes
     public class Apartamento : Imovel
     {
 
+        protected int NumeroApartamento { get; set; }
+        public Apartamento(int id, string endereco, int numero, Proprietario proprietario, int numeroApartamento) : base(id, endereco, numero, proprietario)
+        {
+            this.NumeroApartamento = numeroApartamento;
+        }
+
         public override string ObterStatusAluguel()
         {
             if(this.Alugado)
