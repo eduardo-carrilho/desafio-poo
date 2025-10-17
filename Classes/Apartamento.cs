@@ -7,7 +7,7 @@ namespace desafio_poo.Classes
 {
     public class Apartamento : Imovel
     {
-        public override decimal calcularAluguel(int dias)
+        public override decimal CalcularAluguel(int dias)
         {
             throw new NotImplementedException();
         }

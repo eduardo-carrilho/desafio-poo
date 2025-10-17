@@ -13,20 +13,20 @@ namespace desafio_poo.Classes
         protected bool Alugado { get; set; }
         protected Proprietario Proprietario { get; set; }
 
+        public abstract decimal CalcularAluguel(int dias);
+
         public virtual string ObterStatusAluguel()
         {
-            if(this.Alugado)
+            if (this.Alugado)
             {
                 return $"Esse imóvel está alugado";
             }
             else
             {
-                return "Esse imovél não está alugado";
+                return $"Esse imóvel não está alugado";
             }
         }
 
-
-        public abstract decimal calcularAluguel(int dias);
 
         public void Alugar()
         {
