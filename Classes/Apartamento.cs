@@ -16,19 +16,18 @@ namespace desafio_poo.Classes
 
         public override string ObterStatusAluguel()
         {
-            if(this.Alugado)
+            if(this.estaAlugado())
             {
-                return $"O apartamento nº {this.Numero} está alugado";
+                return $"O apartamento nº {this.NumeroApartamento} está alugado";
             }
-            return $"O apartamento nº {this.Numero} está disponível";
+            return $"O apartamento nº {this.NumeroApartamento} está disponível";
         }
 
         public override decimal CalcularAluguel(int dias)
         {
-            throw new NotImplementedException();
-        }
-
-        
-        
+            decimal valorDiario = 100m;
+            if (dias <= 0) return 0;
+            return valorDiario * dias;
+        }      
     }
 }

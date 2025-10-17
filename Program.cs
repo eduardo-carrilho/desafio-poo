@@ -86,9 +86,99 @@ while (input != "7")
         {
             imobiliaria.ListaImoveis.ForEach(imovel =>
             {
-                Console.WriteLine($"Imóvel endereço: {imovel.puxarEndereco}, ");
+                string tipo = imovel is Casa ? "Casa" : imovel is Apartamento ? "Apartamento" : "Imóvel";
+                int id = imovel.puxarId();
+                string endereco = imovel.puxarEndereco();
+                int numero = imovel.puxarNumero();
+                string status = imovel.ObterStatusAluguel();
+                string contato = imovel.puxarProprietario().contatoProprietario();
+                string extra = "";
+                if (imovel is Apartamento apt)
+                {
+                    extra = $" (Apto nº {(apt.GetType().GetProperty("NumeroApartamento", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(apt) ?? "N/A")})";
+                }
+
+                Console.WriteLine($"ID: {id} | Tipo: {tipo}{extra} | Endereço: {endereco}, {numero} | Status: {status}");
+                Console.WriteLine($"  {contato}");
             });
         }
+    }
+    else if (input == "3")
+    {
+        Console.WriteLine("Digite o ID do imóvel que deseja alugar:");
+        if (int.TryParse(Console.ReadLine(), out int idParaAlugar))
+        {
+            var imovel = imobiliaria.ListaImoveis.FirstOrDefault(i => i.puxarId() == idParaAlugar);
+            if (imovel == null)
+            {
+                Console.WriteLine("Imóvel não encontrado.");
+            }
+            else
+            {
+                imovel.Alugar();
+                Console.WriteLine(imovel.ObterStatusAluguel());
+            }
+        }
+        else Console.WriteLine("ID inválido.");
+    }
+    else if (input == "4")
+    {
+        Console.WriteLine("Digite o ID do imóvel que deseja disponibilizar:");
+        if (int.TryParse(Console.ReadLine(), out int idParaDisp))
+        {
+            var imovel = imobiliaria.ListaImoveis.FirstOrDefault(i => i.puxarId() == idParaDisp);
+            if (imovel == null)
+            {
+                Console.WriteLine("Imóvel não encontrado.");
+            }
+            else
+            {
+                imovel.Disponibilizar();
+                Console.WriteLine(imovel.ObterStatusAluguel());
+            }
+        }
+        else Console.WriteLine("ID inválido.");
+    }
+    else if (input == "5")
+    {
+        Console.WriteLine("Digite o ID do imóvel para calcular o aluguel:");
+        if (int.TryParse(Console.ReadLine(), out int idCalc))
+        {
+            var imovel = imobiliaria.ListaImoveis.FirstOrDefault(i => i.puxarId() == idCalc);
+            if (imovel == null)
+            {
+                Console.WriteLine("Imóvel não encontrado.");
+            }
+            else
+            {
+                Console.WriteLine("Digite a quantidade de dias:");
+                if (int.TryParse(Console.ReadLine(), out int dias))
+                {
+                    decimal valor = imovel.CalcularAluguel(dias);
+                    Console.WriteLine($"Valor do aluguel para {dias} dia(s): R$ {valor}");
+                }
+                else Console.WriteLine("Número de dias inválido.");
+            }
+        }
+        else Console.WriteLine("ID inválido.");
+    }
+    else if (input == "6")
+    {
+        Console.WriteLine("Digite o ID do imóvel que deseja excluir:");
+        if (int.TryParse(Console.ReadLine(), out int idExcluir))
+        {
+            var imovel = imobiliaria.ListaImoveis.FirstOrDefault(i => i.puxarId() == idExcluir);
+            if (imovel == null)
+            {
+                Console.WriteLine("Imóvel não encontrado.");
+            }
+            else
+            {
+                imobiliaria.ListaImoveis.Remove(imovel);
+                Console.WriteLine("Imóvel excluído com sucesso.");
+            }
+        }
+        else Console.WriteLine("ID inválido.");
     }
 
     Console.WriteLine("Selecione uma das nossas opções: \n1. Cadastrar Imóvel (casa/apartamento). \n2. Listar imóveis cadastrados. \n3. Alugar imóvel. \n4. Disponibilizar imóvel. \n5. Calcular valor do aluguel por período. \n6. Excluir Imovel. \n7. Sair.");
