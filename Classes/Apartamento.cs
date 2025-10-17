@@ -7,9 +7,16 @@ namespace desafio_poo.Classes
 {
     public class Apartamento : Imovel
     {
-        public override bool estaAlugado()
+        public override int calcularAluguel(int dias)
         {
-            return this.Alugado;
+            throw new NotImplementedException();
         }
+
+        public override string ObterStatusAluguel()
+        {
+            return "Placeholder";
+        }
+
+        
     }
 }
