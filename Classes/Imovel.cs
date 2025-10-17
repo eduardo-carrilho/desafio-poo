@@ -67,5 +67,10 @@ namespace desafio_poo.Classes
             this.Numero = novoNumero;
         }
 
+        public int puxarNumero()
+        {
+            return this.Numero;
+        }
+
     }
 }
