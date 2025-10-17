@@ -1,0 +1,14 @@
+C:\GFT\desafio-poo\bin\Debug\net8.0\desafio-poo.exe
+C:\GFT\desafio-poo\bin\Debug\net8.0\desafio-poo.deps.json
+C:\GFT\desafio-poo\bin\Debug\net8.0\desafio-poo.runtimeconfig.json
+C:\GFT\desafio-poo\bin\Debug\net8.0\desafio-poo.dll
+C:\GFT\desafio-poo\bin\Debug\net8.0\desafio-poo.pdb
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.GeneratedMSBuildEditorConfig.editorconfig
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.AssemblyInfoInputs.cache
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.AssemblyInfo.cs
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.csproj.CoreCompileInputs.cache
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.dll
+C:\GFT\desafio-poo\obj\Debug\net8.0\refint\desafio-poo.dll
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.pdb
+C:\GFT\desafio-poo\obj\Debug\net8.0\desafio-poo.genruntimeconfig.cache
+C:\GFT\desafio-poo\obj\Debug\net8.0\ref\desafio-poo.dll
